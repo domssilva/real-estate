@@ -1,8 +1,6 @@
-// global settings
-$fontsize: 62.5%;
-
-// colors
-$blue: #267ccc;
-$white: #f7feff;
-
-// mixins
+@import './sass/reset';
+@import './sass/variables';
+@import './sass/mixings';
+@import './sass/typography';
+@import './sass/utils';
+@import './sass/global';

@@ -1,0 +1,56 @@
+.page {
+  padding: 5rem;
+
+  @include adapt(tablet) {
+    padding: 2rem;
+  }
+
+  @include adapt(mobile) {
+    padding: .5rem;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  background-color: transparent;
+  text-transform: capitalize;
+  padding: 1rem 2rem;
+  border-radius: 5%;
+  border: 1px solid lighten($grey, 35%);
+  color: lighten($grey, 15%);
+
+  &:hover {
+    color: $grey;
+  }
+}
+
+.blue {
+  background-color: $blue;
+  border: 1px solid $blue;
+  color: $white;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.nobg {
+  background-color: transparent;
+  border: none;
+}
+
+.margin-right-1 {
+  margin-right: 1rem;
+}
+
+.margin-right-helf {
+  margin-right: .5rem;
+}
+
+.margin-left-1 {
+  margin-left: 1rem;
+}
+
+.margin-left-half {
+  margin-left: .5rem;
+}
