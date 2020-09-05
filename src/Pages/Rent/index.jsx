@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { CgArrowsV } from 'react-icons/cg';
 import { MdFilterList } from 'react-icons/md';
+import { useHistory } from 'react-router-dom';
 
 import { GlobalContext } from '../../context/GlobalState';
 
@@ -13,12 +14,22 @@ import './styles.scss';
 export default function Rent(props) {
 
   const properties = useContext(GlobalContext);
+  const state = props.match.params.state;
 
-  return (
+  const states = {
+    ca: 'California',
+    ny: 'New York',
+    az: 'Arizona',
+  }
+
+  const history = useHistory();
+
+  if (states[state]) {
+    return (
       <section className="page page__rent">
 
         <Topbar />
-        <Header city='Los angeles'/>
+        <Header state={states[state]}/>
 
         <section className="filters">
           <div className="filters__left">
@@ -47,11 +58,16 @@ export default function Rent(props) {
 
         <section className="results">
             {
-              properties.ca.map(property => (
+              properties[state] ?
+              properties[state].map(property => (
                 <Property key={property.id} info={property}/>
-              ))
+              )) : <p className="notfound">0 results for: {states[state]}</p>
             }
         </section>
       </section>
-  )
+    )
+  } else {
+    // in case user tries to type a non existent state in the url, redirect to error page
+    history.push('/error')
+  }
 }

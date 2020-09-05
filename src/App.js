@@ -15,7 +15,7 @@ function App() {
     <GlobalState>
       <Switch>
         <Route exact path='/' component={Home}/>
-        <Route exact path='/rent' component={Rent}/>
+        <Route exact path='/rent/:state' component={Rent}/>
       </Switch>
     </GlobalState>
   );

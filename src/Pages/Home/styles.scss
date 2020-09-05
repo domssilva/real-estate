@@ -22,3 +22,39 @@
     }
   }
 }
+
+.form {
+  @include absolute-center;
+  background-color: rgba($white, .9);
+  z-index: 10;
+  height: 130px;
+  width: 350px;
+  @include flex-column;
+  justify-content: space-around;
+  padding: 2rem 4rem;
+  border-radius: 2%;
+
+  @include adapt(mobile) {
+    padding: 1rem 2rem;
+  }
+
+  &__label {
+    font-size: 2rem;
+    color: $black;
+    font-weight: 700;
+  }
+
+  &__select {
+    font-weight: 400;
+    color: $black;
+    text-transform: capitalize;
+  }
+
+  @include adapt(mobile) {
+    width: 75%;
+  }
+
+  @include adapt(extrasmall) {
+    width: 100%;
+  }
+}
