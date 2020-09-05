@@ -1,0 +1,18 @@
+@import '../../index.scss';
+
+.header {
+  margin-bottom: 4rem;
+
+  &__pretitle {
+    font-weight: 300;
+    color: $grey;
+    margin-bottom: .6rem;
+  }
+
+  &__title {
+    color: $color-title;
+    font-weight: 700;
+    font-size: 3rem;
+    letter-spacing: .08rem;
+  }
+}
