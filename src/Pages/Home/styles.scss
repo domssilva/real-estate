@@ -1,0 +1,24 @@
+@import '../../index.scss';
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-image: 
+    linear-gradient(to right, rgba($white, .4), rgba(black, .4)), 
+    url($herobgurl);
+  
+  &__clip {
+    height: 100%;
+    width: 100%;
+    background-color: rgba($blue, .8);
+    animation: 1s slide-clippath 0.5s cubic-bezier(.09,.66,.71,1.36) forwards;
+
+    @include adapt(mobile) {
+      animation-name: slide-clippath-mobile;
+    }
+  }
+}

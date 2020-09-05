@@ -4,7 +4,6 @@ module.exports = {
     'es6': true,
     'browser': true
   },
-  'extends': 'eslint:recommended',
   'globals': {
     'Atomics': 'readonly',
     'SharedArrayBuffer': 'readonly'
@@ -12,6 +11,9 @@ module.exports = {
   'parserOptions': {
     'ecmaVersion': 2018,
     'sourceType': 'module',
+    'ecmaFeatures': {
+      'jsx': true
+    }
   },
   'rules': {
     'indent': [
@@ -27,8 +29,7 @@ module.exports = {
       'single'
     ],
     'semi': [
-      'error',
-      'never'
+      'always'
     ],
     'eqeqeq': 'error',
     'no-trailing-spaces': 'error',
