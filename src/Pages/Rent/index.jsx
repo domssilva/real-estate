@@ -6,9 +6,10 @@ import Topbar from '../../Components/Topbar';
 import Property from '../../Components/Property';
 import Header from '../../Components/Header';
 
+import properties from '../../Data/properties.data';
 import './styles.scss';
 
-export default function Rent() {
+export default function Rent(props) {
   return (
     <section className="page page__rent">
 
@@ -42,11 +43,11 @@ export default function Rent() {
 
       <section className="results">
 
-        {/* Property component */}
-        <Property />
-        <Property />
-        <Property />
-        <Property />
+        {
+          properties.ca.map(property => (
+            <Property key={property.id} info={property}/>
+          ))
+        }
 
       </section>
     </section>

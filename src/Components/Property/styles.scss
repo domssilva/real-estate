@@ -6,13 +6,22 @@
   justify-content: flex-start;
   padding-top: 5rem;
 
+  &:hover {
+    img {
+      border: 3px solid $blue;
+    }
+  }
+  
   &__img {
     display: block;
     max-width:100%;
     height: 200px;
     object-fit: cover;
     border-radius: 3%;
+    border: 3px solid transparent;
+    transition: .3s ease-out;
   }
+  
 
   &__info {
     width: 100%;
@@ -51,4 +60,10 @@
     width: 100%;
   }
 
+}
+
+.selected {
+  img {
+    border: 3px solid $blue;
+  }
 }
