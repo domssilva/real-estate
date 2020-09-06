@@ -13,5 +13,9 @@
     }
   }
 
-  //&__login {}
+  &__login {
+    button:not(last-of-type) {
+      margin-right: 1rem;
+    }
+  }
 }

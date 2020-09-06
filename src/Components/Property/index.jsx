@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { AiOutlineHome } from 'react-icons/ai';
 import { FaBed, FaBath } from 'react-icons/fa';
 
@@ -7,6 +8,7 @@ import './styles.scss';
 export default function Property(props) {
 
   const {
+    id,
     address,
     location,
     bedrooms,
@@ -16,8 +18,14 @@ export default function Property(props) {
     img
   } = props.info;
 
+  const history = useHistory();
+
+  function redirectOnClick(id) {
+    history.push(`/property/${id}`)
+  }
+
   return (
-    <article className="property">
+    <article className="property" onClick={() => redirectOnClick(id)}>
       <img className="property__img" src={img} alt="property"/>
       <main className="property__info">
         <p className="property__address">{address}</p>
