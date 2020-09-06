@@ -1,1 +1,102 @@
 @import '../../index.scss';
+
+.property-details {
+  display: flex;
+  width: 100%;
+
+  &__gallery {
+    background-color: $color-title;
+    width: 70%;
+    height: 100%;
+
+    &-cover {
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      height: 500px;
+      width: 100%;
+    }
+
+    &-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 0.5fr);
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      @include adapt(mobile) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+      }
+    }
+  }
+
+  &__info {
+    width: 30%;
+    height: 100%;
+    color: $black;
+    font-size: 2.5rem;
+    border-top-right-radius: 3%;
+    background-color: rgba($blue, .4);
+
+    .icons {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+
+      *:not(:last-of-type) {
+        margin-right: 1rem;
+      }
+    }
+
+    @include adapt(mobile) {
+
+    }
+  }
+
+  &__top,
+  &__bottom {
+    padding: 2rem 4rem;
+  }
+
+  &__top {
+    border-bottom: 8px solid rgba($color-title, .3);
+  }
+
+  &__bottom {
+    
+  }
+
+  &__price {
+    color: $color-title;
+    font-weight: 700;
+  }
+
+  &__title {
+    color: black;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+  }
+
+  @include adapt(tablet) {
+    flex-direction: column-reverse;
+
+    &__gallery,
+    &__info {
+      width: 100%;
+    }
+
+    &__gallery {
+      height: 40%;
+    }
+
+    &__info {
+      height: 60%;
+    }
+  }
+}

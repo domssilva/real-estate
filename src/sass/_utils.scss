@@ -8,6 +8,10 @@
   @include adapt(mobile) {
     padding: .5rem;
   }
+
+  @include adapt(extrasmall) {
+    padding: 0;
+  }
 }
 
 .btn {

@@ -14,7 +14,7 @@ export default function Topbar() {
         <AiOutlineMenu className="icon"/>
       </div>
       <div className="top__login">
-        <button className="btn bgtransparent" onClick={history.goBack}>
+        <button className="btn bgtransparent" onClick={() => history.push('/')}>
           <AiOutlineHome className="icon"/>
         </button>
         <button className="btn">join us</button>

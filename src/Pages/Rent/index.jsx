@@ -30,7 +30,7 @@ export default function Rent(props) {
       <MotionWrapper>
         <section className="page page__rent">
           <Topbar />
-          <Header state={states[state]}/>
+          <Header name={states[state]}/>
           <section className="filters">
             <div className="filters__left">
               <button className="btn">

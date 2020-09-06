@@ -1,7 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { AiOutlineHome } from 'react-icons/ai';
-import { FaBed, FaBath } from 'react-icons/fa';
+import PropertyIcons from '../PropertyIcon';
 
 import './styles.scss';
 
@@ -15,13 +14,14 @@ export default function Property(props) {
     bathrooms,
     area,
     price,
-    img
+    img,
+    state,
   } = props.info;
 
   const history = useHistory();
 
   function redirectOnClick(id) {
-    history.push(`/property/${id}`)
+    history.push(`/property/${state}-${id}`)
   }
 
   return (
@@ -31,18 +31,9 @@ export default function Property(props) {
         <p className="property__address">{address}</p>
         <p className="property__location">{location}</p>
         <div className="property__icons">
-          <p className="bed">
-            <FaBed className="icon"/>
-            <span className="margin-left-half">{bedrooms}</span>
-          </p>
-          <p className="bathroom">
-            <FaBath className="icon"/>
-            <span className="margin-left-half">{bathrooms}</span>
-          </p>
-          <p className="area">
-            <AiOutlineHome className="icon"/>
-            <span className="margin-left-half">{area}m²</span>
-          </p>
+          <PropertyIcons type="bed" number={bedrooms} />
+          <PropertyIcons type="bathroom" number={bathrooms} />
+          <PropertyIcons type="area" number={area} />
         </div>
         <p className="property__price">${price}</p>
       </main>

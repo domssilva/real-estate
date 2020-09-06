@@ -15,7 +15,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route exact path='/rent/:state' component={Rent}/>
-          <Route exact path='/property/:id' component={PropertyDetails}/>
+          <Route exact path='/property/:stateid' component={PropertyDetails}/>
         </Switch>
       </AnimatePresence>
     </GlobalState>
