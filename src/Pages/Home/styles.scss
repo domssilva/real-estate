@@ -27,7 +27,7 @@
   @include absolute-center;
   background-color: rgba($white, .9);
   z-index: 10;
-  height: 130px;
+  height: 180px;
   width: 350px;
   @include flex-column;
   justify-content: space-around;
@@ -36,6 +36,15 @@
 
   @include adapt(mobile) {
     padding: 1rem 2rem;
+  }
+
+  &__title {
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid rgba($grey, .1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__label {

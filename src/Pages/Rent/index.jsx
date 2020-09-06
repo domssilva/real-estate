@@ -20,7 +20,7 @@ export default function Rent(props) {
   const states = {
     ca: 'California',
     ny: 'New York',
-    az: 'Arizona',
+    co: 'Colorado',
   }
 
   const history = useHistory();

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import { AiOutlineHome } from 'react-icons/ai';
 import Select from 'react-select';
 
 import MotionWrapper from '../../Components/MotionWrapper';
@@ -14,7 +15,7 @@ export default function Home() {
   const options = [
     { value: 'ca', label: 'california' },
     { value: 'ny', label: 'new york' },
-    { value: 'az', label: 'arizona' }
+    { value: 'co', label: 'colorado' }
   ];
 
   useEffect(() => {
@@ -28,6 +29,10 @@ export default function Home() {
       <header className="hero">
         <div className="hero__clip"></div>
         <form className="form">
+          <h1 className="form__title">
+            <span>Find your new home</span> 
+            <AiOutlineHome className="icon"/>
+          </h1>
           <label className="form__label" htmlFor="selection">Choose a state</label>
           <Select
             defaultValue={selectedOption}
