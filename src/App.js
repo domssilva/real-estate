@@ -3,6 +3,8 @@ import './App.scss';
 import { Switch, Route } from 'react-router-dom';
 
 import GlobalState from './context/GlobalState';
+
+import Home from './Pages/Home';
 import Rent from './Pages/Rent';
 
 function App() {
@@ -12,7 +14,8 @@ function App() {
   return (
     <GlobalState>
       <Switch>
-        <Route exact path='/rent' component={Rent}/>
+        <Route exact path='/' component={Home}/>
+        <Route exact path='/rent/:state' component={Rent}/>
       </Switch>
     </GlobalState>
   );
