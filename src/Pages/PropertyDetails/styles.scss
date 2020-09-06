@@ -3,10 +3,11 @@
 .property-details {
   display: flex;
   width: 100%;
+  overflow: hidden;
 
   &__gallery {
     background-color: $color-title;
-    width: 70%;
+    width: 65%;
     height: 100%;
 
     &-cover {
@@ -36,12 +37,13 @@
   }
 
   &__info {
-    width: 30%;
+    width: 35%;
     height: 100%;
     color: $black;
     font-size: 2.5rem;
     border-top-right-radius: 3%;
     background-color: rgba($blue, .4);
+    @include flex-column;
 
     .icons {
       display: flex;
@@ -67,13 +69,26 @@
     border-bottom: 8px solid rgba($color-title, .3);
   }
 
-  &__bottom {
-    
+  &__icon {
+    color: $black;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+
+    span {
+      font-weight: 300;
+    }
+
+    .icon {
+      margin-right: 1rem;
+      font-size: 3rem;
+    }
   }
 
   &__price {
     color: $color-title;
     font-weight: 700;
+    font-size: 3.5rem;
   }
 
   &__title {
@@ -83,7 +98,12 @@
     text-transform: capitalize;
   }
 
+  &__map {
+
+  }
+
   @include adapt(tablet) {
+    height: unset;
     flex-direction: column-reverse;
 
     &__gallery,
