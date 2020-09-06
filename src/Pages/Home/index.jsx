@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-
 import Select from 'react-select';
+
+import MotionWrapper from '../../Components/MotionWrapper';
 
 import './styles.scss';
 
@@ -23,20 +24,20 @@ export default function Home() {
   }, [selectedOption]);
 
   return (
-    <header className="hero">
-      <div className="hero__clip"></div>
-      
-      <form className="form">
-        <label className="form__label" htmlFor="selection">Choose a state</label>
-        <Select
-          defaultValue={selectedOption}
-          onChange={({value}) => setSelectedOption(value)}
-          options={options}
-          name="selection"
-          className="form__select"
-        />
-      </form>
-
-    </header>
+    <MotionWrapper>
+      <header className="hero">
+        <div className="hero__clip"></div>
+        <form className="form">
+          <label className="form__label" htmlFor="selection">Choose a state</label>
+          <Select
+            defaultValue={selectedOption}
+            onChange={({value}) => setSelectedOption(value)}
+            options={options}
+            name="selection"
+            className="form__select"
+          />
+        </form>
+      </header>
+    </MotionWrapper>
   )
 }
