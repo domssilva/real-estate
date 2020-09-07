@@ -24,11 +24,15 @@ export default function Home() {
     }
   }, [selectedOption]);
 
+  const handleButtonClick = () => {
+    history.push('/all');
+  }
+
   return (
     <MotionWrapper>
       <header className="hero">
         <div className="hero__clip"></div>
-        <form className="form">
+        <section className="form">
           <h1 className="form__title">
             <span>Find your new home</span> 
             <AiOutlineHome className="icon"/>
@@ -39,9 +43,12 @@ export default function Home() {
             onChange={({value}) => setSelectedOption(value)}
             options={options}
             name="selection"
-            className="form__select"
+            className="form__select margin-bottom-1"
           />
-        </form>
+          <button className="btn" onClick={handleButtonClick}>
+            see all properties
+          </button>
+        </section>
       </header>
     </MotionWrapper>
   )

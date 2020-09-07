@@ -1,0 +1,35 @@
+@import '../../index.scss';
+
+.allproperties {
+  display: grid;
+  gap: 5rem 1rem;
+  grid-template-columns: repeat(5, 1fr);
+    
+  .property {
+    padding-top: 0;
+    
+    img {
+      width: 150px;
+      height: 150px;
+
+      @include adapt(mobile) {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    @include adapt(mobile) {
+      display: block;
+      width: 200px;
+      margin: auto;
+    }
+  }
+
+  @include adapt(tablet) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include adapt(mobile) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
