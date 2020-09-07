@@ -6,9 +6,8 @@ import { Redirect, useHistory } from 'react-router-dom';
 import { GlobalContext } from '../../context/GlobalState';
 
 import MotionWrapper from '../../Components/MotionWrapper';
-import Topbar from '../../Components/Topbar';
 import Property from '../../Components/Property';
-import Header from '../../Components/Header';
+import TopHeader from '../../Components/TopHeader';
 
 import './styles.scss';
 
@@ -29,8 +28,7 @@ export default function Rent(props) {
     return (
       <MotionWrapper>
         <section className="page page__rent">
-          <Topbar />
-          <Header name={states[state]}/>
+          <TopHeader name={states[state]}/>
           <section className="filters">
             <div className="filters__left">
               <button className="btn">

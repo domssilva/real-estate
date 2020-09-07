@@ -4,8 +4,7 @@ import { GlobalContext } from '../../context/GlobalState';
 import { IoIosArrowBack } from 'react-icons/io';
 
 import MotionWrapper from '../../Components/MotionWrapper';
-import Topbar from '../../Components/Topbar';
-import Header from '../../Components/Header';
+import TopHeader from '../../Components/TopHeader';
 import PropertyIcons from '../../Components/PropertyIcon';
 import LeafletMap from '../../Components/LeafletMap';
 
@@ -31,8 +30,7 @@ export default function PropertyDetails() {
   return (
     <MotionWrapper>
       <section className="page page__property">
-        <Topbar />
-        <Header name={`${selectedProperty.address}, ${String(selectedProperty.state).toUpperCase()}`} />
+        <TopHeader name={`${selectedProperty.address}, ${String(selectedProperty.state).toUpperCase()}`} />
         <main className="property-details">
           <section className="property-details__gallery">
             <img 
