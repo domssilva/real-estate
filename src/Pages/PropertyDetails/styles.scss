@@ -4,17 +4,20 @@
   display: flex;
   width: 100%;
   overflow: hidden;
+  height: 800px;
 
   &__gallery {
     background-color: $color-title;
+    border-top-left-radius: $property-border-radius;
     width: 65%;
     height: 100%;
 
     &-cover {
+      border-top-left-radius: inherit;
       display: block;
       object-fit: cover;
       object-position: center;
-      height: 500px;
+      height: 50%;
       width: 100%;
     }
 
@@ -34,6 +37,10 @@
         grid-template-rows: repeat(1, 1fr);
       }
     }
+
+    @include adapt(mobile) {
+      border-top-left-radius: unset;
+    }
   }
 
   &__info {
@@ -41,7 +48,7 @@
     height: 100%;
     color: $black;
     font-size: 2.5rem;
-    border-top-right-radius: 3%;
+    border-top-right-radius: $property-border-radius;
     background-color: rgba($blue, .4);
     @include flex-column;
 
@@ -62,7 +69,7 @@
 
   &__top,
   &__bottom {
-    padding: 2rem 4rem;
+    padding: 4rem 6rem;
   }
 
   &__top {
@@ -94,7 +101,7 @@
   &__title {
     color: black;
     font-size: 3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     text-transform: capitalize;
   }
 

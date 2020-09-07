@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { CgArrowsV } from 'react-icons/cg';
 import { MdFilterList } from 'react-icons/md';
-import { useHistory } from 'react-router-dom';
+import { Redirect, useHistory } from 'react-router-dom';
 
 import { GlobalContext } from '../../context/GlobalState';
 
@@ -69,6 +69,6 @@ export default function Rent(props) {
     )
   } else {
     // in case user tries to type a non existent state in the url, redirect to error page
-    history.push('/error')
+    return <Redirect to="/error" />;
   }
 }

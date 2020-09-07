@@ -16,7 +16,6 @@ export default class LeafletMap extends Component {
     const position = [this.props.lat, this.props.lng];
 
     const myIcon = L.icon({
-    lng: 9.0706156,
         iconUrl: mapPin,
         iconSize: [30, 30],
     });

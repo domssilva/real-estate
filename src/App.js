@@ -6,6 +6,7 @@ import GlobalState from './context/GlobalState';
 
 import Home from './Pages/Home';
 import Rent from './Pages/Rent';
+import Error from './Pages/Error';
 import PropertyDetails from './Pages/PropertyDetails';
 
 function App() {
@@ -16,6 +17,8 @@ function App() {
           <Route exact path='/' component={Home}/>
           <Route exact path='/rent/:state' component={Rent}/>
           <Route exact path='/property/:stateid' component={PropertyDetails}/>
+          <Route exact path='/error' component={Error}/>
+          <Route path='/' component={Error}/>
         </Switch>
       </AnimatePresence>
     </GlobalState>
