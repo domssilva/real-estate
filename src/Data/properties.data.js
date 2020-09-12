@@ -8,7 +8,7 @@ const properties = {
       bedrooms: 2,
       bathrooms: 1,
       area: 90,
-      price: '123,950',
+      price: '63,950',
       img: 'https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
       state: 'ca',
       innerPhotos: [

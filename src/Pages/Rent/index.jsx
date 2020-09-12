@@ -26,7 +26,7 @@ export default function Rent(props) {
       <MotionWrapper>
         <section className="page page__rent">
           <TopHeader name={states[state]}/>
-          <Filters />
+          <Filters properties={properties[state]}/>
           <section className="results">
               {
                 properties[state] ?

@@ -11,16 +11,15 @@ import './styles.scss';
 export default function AllProperties() {
 
   const allProperties = useContext(StatesContext);
-  console.log(allProperties);
 
   return (
     <MotionWrapper>
       <section className="page page__all">
         <TopHeader name="All Available Properties"/>
-        <Filters />
+        <Filters properties={allProperties}/>
         <main className="allproperties">
           {
-            allProperties.map(info => <Property info={info}/>)
+            allProperties.map(info => <Property key={info.id} info={info}/>)
           }
         </main>
       </section>
