@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
-import { GlobalContext } from '../../context/GlobalState';
+import { GlobalContext } from '../../Context/GlobalState';
 import { IoIosArrowBack } from 'react-icons/io';
 
 import MotionWrapper from '../../Components/MotionWrapper';

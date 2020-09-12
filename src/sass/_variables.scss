@@ -1,6 +1,7 @@
 // colors
 $white: #f7feff;
 $grey: #5e5e5e;
+$light-grey: #bebebe;
 $black: #333;
 
 $light-blue: #c8dff5;
@@ -10,6 +11,9 @@ $color-title: #061569;
 // sizing
 $fontsize: 62.5%;
 $property-border-radius: 20px;
+
+// stylying
+$border-light-grey: 1px solid $light-grey;
 
 // urls
 $herobgurl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=750&q=80';

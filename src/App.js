@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
-import GlobalState from './context/GlobalState';
+import GlobalState from './Context/GlobalState';
 
 import Home from './Pages/Home';
 import Rent from './Pages/Rent';

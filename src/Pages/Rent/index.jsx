@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Redirect } from 'react-router-dom';
 
-import { GlobalContext } from '../../context/GlobalState';
+import { GlobalContext } from '../../Context/GlobalState';
 
 import MotionWrapper from '../../Components/MotionWrapper';
 import Property from '../../Components/Property';

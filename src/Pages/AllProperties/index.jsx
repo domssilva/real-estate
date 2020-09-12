@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { StatesContext } from '../../context/GlobalState';
+import { StatesContext } from '../../Context/GlobalState';
 
 import MotionWrapper from '../../Components/MotionWrapper';
 import TopHeader from '../../Components/TopHeader';
