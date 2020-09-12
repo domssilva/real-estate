@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { Redirect } from 'react-router-dom';
 
 import { GlobalContext } from '../../Context/GlobalState';
@@ -12,8 +12,11 @@ import './styles.scss';
 
 export default function Rent(props) {
 
-  const properties = useContext(GlobalContext);
+  const allProperties = useContext(GlobalContext);
   const state = props.match.params.state;
+
+  const [properties, setProperties] = useState(allProperties);
+  const [filterResults, setFilterResults] = useState(null);
 
   const states = {
     ca: 'California',
@@ -26,13 +29,21 @@ export default function Rent(props) {
       <MotionWrapper>
         <section className="page page__rent">
           <TopHeader name={states[state]}/>
-          <Filters properties={properties[state]}/>
+          <Filters 
+            properties={properties[state]} 
+            setFilterResults={setFilterResults}
+          />
           <section className="results">
-              {
+              {/* {
                 properties[state] ?
                 properties[state].map(property => (
                   <Property key={property.id} info={property}/>
                 )) : <p className="notfound">0 results for: {states[state]}</p>
+              } */}
+              {
+                filterResults ?
+                filterResults.map(info => <Property key={info.id} info={info}/>)
+                : properties[state].map(info => <Property key={info.id} info={info}/>)
               }
           </section>
         </section>
