@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { StatesContext } from '../../Context/GlobalState';
 
 import MotionWrapper from '../../Components/MotionWrapper';
@@ -9,20 +9,26 @@ import Filters from '../../Components/Filters';
 import './styles.scss';
 
 export default function AllProperties() {
-
   const allProperties = useContext(StatesContext);
+  const [properties, setProperties] = useState(allProperties);
+  const [filterResults, setFilterResults] = useState(null);
 
   return (
     <MotionWrapper>
       <section className="page page__all">
         <TopHeader name="All Available Properties"/>
-        <Filters properties={allProperties}/>
+        <Filters 
+          properties={properties} 
+          setFilterResults={setFilterResults}
+        />
         <main className="allproperties">
           {
-            allProperties.map(info => <Property key={info.id} info={info}/>)
+            filterResults ?
+            filterResults.map(info => <Property key={info.id} info={info}/>)
+            : properties.map(info => <Property key={info.id} info={info}/>)
           }
         </main>
       </section>
     </MotionWrapper>
-  )
+  );
 }

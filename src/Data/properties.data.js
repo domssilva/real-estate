@@ -8,7 +8,7 @@ const properties = {
       bedrooms: 2,
       bathrooms: 1,
       area: 90,
-      price: '63,950',
+      price: '63950',
       img: 'https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
       state: 'ca',
       innerPhotos: [
@@ -28,7 +28,7 @@ const properties = {
       bedrooms: 3,
       bathrooms: 2,
       area: 200,
-      price: '400,720',
+      price: '400720',
       img: 'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80',
       state: 'ca',
       innerPhotos: [
@@ -48,7 +48,7 @@ const properties = {
       bedrooms: 3,
       bathrooms: 4,
       area: 280,
-      price: '412,158',
+      price: '412158',
       img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80',
       state: 'ca',
       innerPhotos: [
@@ -68,7 +68,7 @@ const properties = {
       bedrooms: 4,
       bathrooms: 3,
       area: 395,
-      price: '342,740',
+      price: '342740',
       img: 'https://images.unsplash.com/photo-1494526585095-c41746248156?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80',
       state: 'ca',
       innerPhotos: [
@@ -88,7 +88,7 @@ const properties = {
       bedrooms: 5,
       bathrooms: 6,
       area: 500,
-      price: '503,640',
+      price: '503640',
       img: 'https://images.unsplash.com/photo-1503174971373-b1f69850bded?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=787&q=80',
       state: 'ca',
       innerPhotos: [
@@ -108,7 +108,7 @@ const properties = {
       bedrooms: 8,
       bathrooms: 10,
       area: 600,
-      price: '1,803,640',
+      price: '1803640',
       img: 'https://images.unsplash.com/photo-1570057633712-870fa818fa15?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80',
       state: 'ca',
       innerPhotos: [
@@ -130,7 +130,7 @@ const properties = {
       bedrooms: 1,
       bathrooms: 1,
       area: 70,
-      price: '123,950',
+      price: '123950',
       img: 'https://images.unsplash.com/photo-1464890100898-a385f744067f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
       state: 'ny',
       innerPhotos: [
@@ -150,7 +150,7 @@ const properties = {
       bedrooms: 2,
       bathrooms: 2,
       area: 90,
-      price: '200,915',
+      price: '200915',
       img: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
       state: 'ny',
       innerPhotos: [
@@ -170,7 +170,7 @@ const properties = {
       bedrooms: 2,
       bathrooms: 3,
       area: 90,
-      price: '352,200',
+      price: '352200',
       img: 'https://images.unsplash.com/photo-1493246318656-5bfd4cfb29b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
       state: 'ny',
       innerPhotos: [
@@ -190,7 +190,7 @@ const properties = {
       bedrooms: 4,
       bathrooms: 3,
       area: 395,
-      price: '342,740',
+      price: '342740',
       img: 'https://images.unsplash.com/photo-1494526585095-c41746248156?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80',
       state: 'ny',
       innerPhotos: [
@@ -210,7 +210,7 @@ const properties = {
       bedrooms: 1,
       bathrooms: 1,
       area: 75,
-      price: '90,640',
+      price: '90640',
       img: 'https://images.unsplash.com/photo-1547467520-ccfae1dbea09?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
       state: 'ny',
       innerPhotos: [
@@ -230,7 +230,7 @@ const properties = {
       bedrooms: 3,
       bathrooms: 4,
       area: 460,
-      price: '1,403,640',
+      price: '1403640',
       img: 'https://images.unsplash.com/photo-1501183638710-841dd1904471?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
       state: 'ny',
       innerPhotos: [
@@ -252,7 +252,7 @@ const properties = {
       bedrooms: 3,
       bathrooms: 4,
       area: 315,
-      price: '1,455,000',
+      price: '1455000',
       img: 'https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
       state: 'co',
       innerPhotos: [
@@ -272,7 +272,7 @@ const properties = {
       bedrooms: 3,
       bathrooms: 2,
       area: 200,
-      price: '400,720',
+      price: '400720',
       img: 'https://images.unsplash.com/photo-1467987506553-8f3916508521?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
       state: 'co',
       innerPhotos: [
@@ -292,7 +292,7 @@ const properties = {
       bedrooms: 3,
       bathrooms: 4,
       area: 280,
-      price: '412,158',
+      price: '412158',
       img: 'https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
       state: 'co',
       innerPhotos: [
@@ -312,7 +312,7 @@ const properties = {
       bedrooms: 4,
       bathrooms: 3,
       area: 395,
-      price: '342,740',
+      price: '342740',
       img: 'https://images.unsplash.com/photo-1507089947368-19c1da9775ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
       state: 'co',
       innerPhotos: [
@@ -332,7 +332,7 @@ const properties = {
       bedrooms: 5,
       bathrooms: 6,
       area: 500,
-      price: '503,640',
+      price: '503640',
       img: 'https://images.unsplash.com/photo-1493809842364-78817add7ffb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
       state: 'co',
       innerPhotos: [
@@ -352,7 +352,7 @@ const properties = {
       bedrooms: 8,
       bathrooms: 10,
       area: 600,
-      price: '1,803,640',
+      price: '1803640',
       img: 'https://images.unsplash.com/photo-1502005097973-6a7082348e28?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
       state: 'co',
       innerPhotos: [

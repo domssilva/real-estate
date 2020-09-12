@@ -1,14 +1,46 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { CgArrowsV } from 'react-icons/cg';
 import { MdFilterList } from 'react-icons/md';
 
 import './styles.scss';
 
-export default function Filters() {
+export default function Filters({ properties, setFilterResults }) {
+  /*
+    props.setFilterResults is in charge of setting which properties must 
+    be shown according to the selected filter
+  */
+ console.log(properties);
 
   const [priceFilter, setPriceFilter] = useState('Any price');
   const [areaFilter, setAreaFilter] = useState('Floor area');
   const [roomsFilter, setRoomsFilter] = useState('Rooms');
+
+  const resetFilters = () => {
+    setPriceFilter('Any price')
+    setAreaFilter('Floor area')
+    setRoomsFilter('Rooms')
+    setFilterResults(null);
+  }
+
+  useEffect(() => {
+    
+    if (priceFilter !== 'Any price') {
+      let filtered;
+      let [min, max] = priceFilter.replace(/[\s$+]/gi, '').split('-');
+      
+      try {
+        max = parseInt(max.replace(',', ''));
+      } catch {
+        // if max results undefinedfilter is $ 500k +
+        filtered = properties.filter(house => parseInt(house.price.replace(',', '')) > 500000);
+        return setFilterResults(filtered);
+      }
+
+      filtered = properties.filter(house => parseInt(house.price.replace(',', '')) < max);
+      setFilterResults(filtered);
+    }
+
+  }, [priceFilter]);
 
   return (
     <section className="filters">
@@ -46,7 +78,11 @@ export default function Filters() {
             <li className="filters__li" onClick={(e) => {setRoomsFilter(e.target.innerText)}}>2+ rooms</li>
           </ul>
         </div>
-        <MdFilterList className="icon filter-icon btn nobg" />
+        <MdFilterList 
+          className="icon filter-icon btn nobg" 
+          title="clear filters" 
+          onClick={resetFilters}
+        />
       </div>
       <div className="filters__right">
         <p>
